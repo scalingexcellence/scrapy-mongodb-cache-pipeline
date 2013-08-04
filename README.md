@@ -6,7 +6,9 @@ Install
 =======
    pip install "ScrapyMongoDBCache"
 
-   Make your pipeline derive from MongoCacheBasePipeline and decorate the process_item method with the @cache decorator. The parameters for the decorator are: 1st the database and the collection to use in MongoDB, 2nd item's field to be used as a key and 3rd, array of fields to be used as cached values. Calls to process_item() aren't made if the key exists in cache. The cache assumes that MongoDB is installed in localhost. If it's installed somewhere else, then set the mongohost spider argument when you run scrapy (e.g. scrapy crawl myspider -a mongohost=username:password@host1:port1). Example implementation:
+Make your pipeline derive from MongoCacheBasePipeline and decorate the process_item method with the @cache decorator. The parameters for the decorator are: 1st the database and the collection to use in MongoDB, 2nd item's field to be used as a key and 3rd, array of fields to be used as cached values. Calls to process_item() aren't made if the key exists in cache. The cache assumes that MongoDB is installed in localhost. If it's installed somewhere else, then set the mongohost spider argument when you run scrapy (e.g. scrapy crawl myspider -a mongohost=username:password@host1:port1).
+
+Example implementation
 ----------------------------
 
     from geopy import geocoders
