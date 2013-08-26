@@ -12,7 +12,7 @@ Example implementation
 ----------------------------
 
     from geopy import geocoders
-    from mongocache import *
+    from scrapymongocache import *
 
     class GeocodingPipeline(MongoCacheBasePipeline):
         def __init__(self):
